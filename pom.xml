@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sckj</groupId>
+    <artifactId>springboot_parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springboot_01_hello</module>
+        <module>springboot_02_json</module>
+        <module>springboot_03_logger</module>
+        <module>springboot_04_config</module>
+        <module>springboot_05_quickstart</module>
+        <module>springboot_06_mvc</module>
+        <module>springboot_07_swagger</module>
+        <module>springboot_08_thymeleaf</module>
+        <module>springboot_09_exception</module>
+        <module>springboot_10_aop</module>
+        <module>springboot_11_mybatis</module>
+        <module>springboot_12_transaction</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <!--springboot版本管理-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.4.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
