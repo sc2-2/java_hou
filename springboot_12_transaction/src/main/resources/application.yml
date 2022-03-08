@@ -1,0 +1,25 @@
+# 配置端口
+server:
+  port: 8000
+
+# 配置数据源
+datasource:
+    url: localhost:3306/test_db
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${datasource.url}?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 10
+      max-lifetime: 1770000
+
+# mybatis配置
+mybatis:
+  type-aliases-package: com.xd.entity
+  configuration:
+    map-underscore-to-camel-case: true #驼峰命名法
+  mapper-locations:
+    - classpath:mapper/*.xml
